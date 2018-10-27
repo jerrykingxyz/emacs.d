@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: js_remark
+# key: /**
+# --
+/**
+ * $0
+ */
