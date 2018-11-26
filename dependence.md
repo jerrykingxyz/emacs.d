@@ -44,3 +44,6 @@ npm install -g tslint typescript
 WARNING: ts lint config file need in the project directory
 *** js & ts code beauty
 npm install -g prettier
+
+*** global search rg
+brew install ripgrep

@@ -6,6 +6,8 @@
 ;;(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 ;;ycmd
 ;;(require 'init-ycmd)
+;;rg
+(require 'init-rg)
 ;;company mode
 (require 'init-company)
 ;;flycheck mode
@@ -28,6 +30,8 @@
 (require 'init-javascript)
 ;;shortcut key
 (require 'init-shortcut-key)
+;;golang
+(require 'init-go)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
