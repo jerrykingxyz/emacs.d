@@ -4,6 +4,8 @@
 
 ;; org mode 自动断行
 ;;(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+;;git
+(require 'init-git)
 ;;rg
 (require 'init-rg)
 ;;company mode
