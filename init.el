@@ -8,8 +8,8 @@
 (require 'init-git)
 ;;rg
 (require 'init-rg)
-;;company mode
-(require 'init-company)
+;;lsp
+(require 'init-lsp)
 ;;flycheck mode
 (require 'init-flycheck)
 ;;glsl mode

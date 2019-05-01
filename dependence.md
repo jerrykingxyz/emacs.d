@@ -42,8 +42,12 @@ create ~/.eslintrc
 *** flycheck for ts
 npm install -g tslint typescript
 WARNING: ts lint config file need in the project directory
+
 *** js & ts code beauty
 npm install -g prettier
 
 *** global search rg
 brew install ripgrep
+
+*** lsp for front end
+npm install javascript-typescript-langserver -g
