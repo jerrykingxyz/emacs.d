@@ -30,8 +30,6 @@
 (require 'init-javascript)
 ;;shortcut key
 (require 'init-shortcut-key)
-;;golang
-(require 'init-go)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -20,5 +20,6 @@
 (add-hook 'js-mode-hook #'lsp)
 (add-hook 'typescript-mode-hook #'lsp)
 (add-hook 'web-mode-hook #'lsp)
+(add-hook 'go-mode-hook #'lsp)
 
 (provide 'init-lsp)

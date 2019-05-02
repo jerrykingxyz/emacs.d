@@ -51,3 +51,6 @@ brew install ripgrep
 
 *** lsp for front end
 npm install javascript-typescript-langserver -g
+
+*** lsp for go
+go get -u github.com/sourcegraph/go-langserver
