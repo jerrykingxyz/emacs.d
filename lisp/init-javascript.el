@@ -1,7 +1,9 @@
 (require-package 'web-mode)
+(require-package 'typescript-mode)
 (require-package 'prettier-js)
 
 (require 'web-mode)
+(require 'typescript-mode)
 (require 'prettier-js)
 
 ;; set .jsx & .tsx file to web-mode
