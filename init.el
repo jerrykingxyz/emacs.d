@@ -16,8 +16,8 @@
 (require 'init-glsl)
 ;;yasnippet
 (require 'init-yasnippet)
-;;emmet mode
-(require 'init-emmet)
+;;css mode
+(require 'init-css)
 ;;neotree
 (require 'init-neotree)
 ;;utils
