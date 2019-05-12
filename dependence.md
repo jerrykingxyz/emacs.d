@@ -50,7 +50,7 @@ npm install -g prettier
 brew install ripgrep
 
 *** lsp for front end
-npm install javascript-typescript-langserver -g
+npm install -g typescript-language-server
 
 *** lsp for go
 go get -u github.com/sourcegraph/go-langserver
