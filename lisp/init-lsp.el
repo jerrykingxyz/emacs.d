@@ -1,12 +1,6 @@
 ;; company lsp
 (require-package 'company-lsp)
 (require 'company-lsp)
-;; config
-(setq company-show-numbers t)
-(let ((map company-active-map))
-  (mapc (lambda (x) (define-key map (format "%d" x)
-                 `(lambda () (interactive) (company-complete-number ,x))))
-        (number-sequence 0 9)))
 
 ;; lsp ui
 (require-package 'lsp-ui)
