@@ -5,6 +5,7 @@
 ;; lsp ui
 (require-package 'lsp-ui)
 (require 'lsp-ui)
+(setq lsp-ui-sideline-delay 3)
 
 ;; lsp mode
 (require-package 'lsp-mode)
