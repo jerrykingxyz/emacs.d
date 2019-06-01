@@ -1,3 +1,4 @@
+(require 'init-utils)
 ;;ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
@@ -10,9 +11,6 @@
 (setq-default tab-width 2)
 ;; 打开括号匹配
 (show-paren-mode 1)
-;; 显示时间
-(setq-default display-time-format "%Y/%b/%d %H:%M")
-(display-time-mode 1)
 ;; 隐藏menu bar
 (menu-bar-mode -1)
 ;; 高亮正在编辑的行
@@ -21,5 +19,17 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 ;;禁止在鼠标点击的地方插入剪贴板内容
 (setq mouse-yank-at-point t)
+
+(setq-default mode-line-format
+              '(:eval (utils-format-line
+                       (concat (format-mode-line " %b [%*] %l:%c ")
+                               (format-mode-line '(vc-mode vc-mode))
+                               )
+                       (concat (format-mode-line " [%m] ")
+                               (format-mode-line 'minor-mode-alist)
+                               )
+                       )
+                      )
+              )
 
 (provide 'init-custom-config)
