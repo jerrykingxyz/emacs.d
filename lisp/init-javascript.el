@@ -20,4 +20,11 @@
 (setq-default web-mode-css-indent-offset 2)
 (setq-default web-mode-code-indent-offset 2)
 
+(require 'init-neotree)
+(add-hook 'neotree-change-root-hook
+          (lambda (root-dir)
+            (let* ((node-modules-prettier (expand-file-name "node_modules/.bin/prettier" root-dir))
+                   (prettier-js-command-path (if (file-exists-p node-modules-prettier) node-modules-prettier "prettier")))
+              (setq-default prettier-js-command prettier-js-command-path))))
+
 (provide 'init-javascript)
