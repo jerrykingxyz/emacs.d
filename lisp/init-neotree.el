@@ -13,4 +13,10 @@
                       (run-hook-with-args 'neotree-change-root-hook root-dir)
                       ))
 
+(add-hook 'neotree-change-root-hook
+          (lambda (root-dir)
+            (let* ((project-init-file (expand-file-name "./.emacs/init.el" root-dir)))
+              (if (file-exists-p project-init-file)
+                  (load project-init-file)))))
+
 (provide 'init-neotree)
