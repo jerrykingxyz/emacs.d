@@ -22,6 +22,8 @@
 (require 'init-neotree)
 ;;custom config
 (require 'init-custom-config)
+;;buffer
+(require 'init-buffer)
 ;;theme
 (require 'init-theme)
 ;;json

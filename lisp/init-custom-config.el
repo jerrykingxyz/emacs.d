@@ -1,7 +1,4 @@
 (require 'init-utils)
-;;ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-(autoload 'ibuffer "ibuffer" "List buffers." t)
 
 ;; 不自动保存模式
 (setq auto-save-default nil)
@@ -26,41 +23,5 @@
                                (format-mode-line '(vc-mode vc-mode)))
                        (concat (format-mode-line " [%m] ")
                                (format-mode-line 'minor-mode-alist)))))
-
-(defun* to-next-file-buffer ()
-  (let* ((buf-list (buffer-list))
-         (buf-length (length buf-list))
-         (current-buf-index (position (current-buffer) buf-list))
-         (i 0))
-    (while (< i buf-length)
-      (let* ((index (% (+ i current-buf-index) buf-length))
-             (buf (nth index buf-list)))
-        (setq i (+ i 1))
-        (if (buffer-file-name buf)
-            (progn
-              (message "debugger: %s" buf)
-              (switch-to-buffer buf)
-              (return-from test-to-next-file-buffer)
-              ))
-        ))
-    ))
-
-(defun* to-previous-file-buffer ()
-  (let* ((buf-list (buffer-list))
-         (buf-length (length buf-list))
-         (current-buf-index (position (current-buffer) buf-list))
-         (i 0))
-    (while (< i buf-length)
-      (let* ((index (% (+ (- current-buf-index i) buf-length) buf-length))
-             (buf (nth index buf-list)))
-        (setq i (+ i 1))
-        (if (buffer-file-name buf)
-            (progn
-              (message "debugger: %s" buf)
-              (switch-to-buffer buf)
-              (return-from test-to-next-file-buffer)
-              ))
-        ))
-    ))
 
 (provide 'init-custom-config)
