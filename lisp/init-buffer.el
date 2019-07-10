@@ -8,10 +8,11 @@
 
 (defun to-next-file-buffer ()
   "Change current buffer to next file buffer."
+  (interactive)
   (let* ((buf-list (buffer-list))
          (buf-length (length buf-list))
          (current-buf-index (cl-position (current-buffer) buf-list))
-         (i 0))
+         (i 1))
     (while (< i buf-length)
       (let* ((index (% (+ i current-buf-index) buf-length))
              (buf (nth index buf-list)))
@@ -20,17 +21,18 @@
             (progn
               (message "debugger: %s" buf)
               (switch-to-buffer buf)
-              (cl-return-from 'to-next-file-buffer)
+              (cl-return-from to-next-file-buffer nil)
               ))
         ))
     ))
 
 (defun to-previous-file-buffer ()
   "Change current buffer to previous file buffer."
+  (interactive)
   (let* ((buf-list (buffer-list))
          (buf-length (length buf-list))
          (current-buf-index (cl-position (current-buffer) buf-list))
-         (i 0))
+         (i 1))
     (while (< i buf-length)
       (let* ((index (% (+ (- current-buf-index i) buf-length) buf-length))
              (buf (nth index buf-list)))
@@ -39,7 +41,7 @@
             (progn
               (message "debugger: %s" buf)
               (switch-to-buffer buf)
-              (cl-return-from 'to-previous-file-buffer)
+              (cl-return-from to-previous-file-buffer nil)
               ))
         ))
     ))
