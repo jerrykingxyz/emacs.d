@@ -46,5 +46,8 @@
         ))
     ))
 
+(global-set-key (kbd "C-x <left>") 'to-previous-file-buffer)
+(global-set-key (kbd "C-x <right>") 'to-next-file-buffer)
+
 (provide 'init-buffer)
 ;;; init-buffer.el ends here
