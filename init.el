@@ -1,3 +1,8 @@
+;;; init.el --- Load the full configuration -*- lexical-binding: t -*-
+
+;;; Commentary:
+
+;;; Code:
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-elpa)
@@ -38,3 +43,4 @@
 (require 'init-multiple-cursors)
 
 (provide 'init)
+;;; init.el ends here
