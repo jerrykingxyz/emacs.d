@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: exportp
+# key: exportp
+# --
+export { ${2:name} } from '${1:path}'$0

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: importp
+# key: importp
+# --
+import { ${2:name} } from '${1:path}'$0
