@@ -2,4 +2,4 @@
 # name: export
 # key: export
 # --
-export ${2:name} from '${1:path}'$0
+export { default as ${2:${1:$(let* ((name (file-name-base (yas-text)))) (if (string-equal name "") "name" name))}} } from '${1:path}'$0
