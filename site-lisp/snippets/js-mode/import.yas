@@ -2,4 +2,4 @@
 # name: import
 # key: import
 # --
-import ${2:${1:$(let* ((name (file-name-base (yas-text)))) (if (string-equal name "") "name" name))}} from '${1:path}'$0
+import ${2:${1:$(let* ((name (file-name-base (yas-text)))) (if (string-empty-p name) "name" name))}} from '${1:path}'$0
