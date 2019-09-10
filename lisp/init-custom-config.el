@@ -1,3 +1,8 @@
+;;; init-custom-config.el --- custom config  -*- lexical-binding: t -*-
+
+;;; Commentary:
+
+;;; Code:
 (require 'init-utils)
 
 ;; 不自动保存模式
@@ -6,16 +11,19 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
-;; 打开括号匹配
+
 (show-paren-mode 1)
-;; 隐藏menu bar
+;; hide menu bar
 (menu-bar-mode -1)
-;; 高亮正在编辑的行
+;; high light edit line
 (global-hl-line-mode 1)
-;;改变Emacs要你回答yes的行为。按y或空格键表示yes，n表示no。
+;; use y or n
 (fset 'yes-or-no-p 'y-or-n-p)
-;;禁止在鼠标点击的地方插入剪贴板内容
+
 (setq mouse-yank-at-point t)
+
+;; use global subword-mode
+;; (global-subword-mode 1)
 
 (setq-default mode-line-format
               '(:eval (utils-format-line
@@ -25,3 +33,4 @@
                                (format-mode-line 'minor-mode-alist)))))
 
 (provide 'init-custom-config)
+;;; init-custom-config.el ends here
