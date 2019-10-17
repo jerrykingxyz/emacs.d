@@ -14,7 +14,11 @@
 
 (show-paren-mode 1)
 ;; hide menu bar
-(menu-bar-mode -1)
+(menu-bar-mode 0)
+;; hide tool bar
+(tool-bar-mode 0)
+;; hide scroll bar
+(if window-system (scroll-bar-mode 0))
 ;; high light edit line
 (global-hl-line-mode 1)
 ;; use y or n
