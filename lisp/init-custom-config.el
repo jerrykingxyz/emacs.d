@@ -27,7 +27,7 @@
 (setq mouse-yank-at-point t)
 
 ;; use global subword-mode
-;; (global-subword-mode 1)
+(global-subword-mode 1)
 
 (setq-default mode-line-format
               '(:eval (utils-format-line
