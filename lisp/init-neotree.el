@@ -1,3 +1,8 @@
+;;; init-neotree.el --- neotree config  -*- lexical-binding: t -*-
+
+;;; Commentary:
+
+;;; Code:
 (require-package 'neotree)
 
 (require 'neotree)
@@ -19,4 +24,7 @@
               (if (file-exists-p project-init-file)
                   (load project-init-file)))))
 
+(neotree-show)
+
 (provide 'init-neotree)
+;;; init-neotree.el ends here
