@@ -1,3 +1,9 @@
+;;; init-lsp.el --- lsp & dap  -*- lexical-binding: t -*-
+
+;;; Commentary:
+
+;;; Code:
+
 ;; company lsp
 (require-package 'company-lsp)
 (require 'company-lsp)
@@ -17,4 +23,13 @@
 (add-hook 'web-mode-hook #'lsp)
 (add-hook 'go-mode-hook #'lsp)
 
+;; dap mode
+;;(require-package 'dap-mode)
+;;(require 'dap-mode)
+;;(dap-mode 1)
+;;(dap-ui-mode 1)
+;; nodejs
+;;(require 'dap-node)
+
 (provide 'init-lsp)
+;;; init-lsp.el ends here
