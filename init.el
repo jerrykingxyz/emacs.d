@@ -5,6 +5,9 @@
 ;;; Code:
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+;; to fix macOS failed to download 'gnu' archive bug
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 (require 'init-elpa)
 
 ;; org mode 自动断行

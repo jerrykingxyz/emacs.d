@@ -5,19 +5,16 @@
 ;;; Code:
 
 ;; company lsp
-(require-package 'company-lsp)
-(require 'company-lsp)
-
-;; lsp ui
-(require-package 'lsp-ui)
-(require 'lsp-ui)
-(setq lsp-ui-sideline-delay 3)
+;;(require-package 'company-lsp)
+;;(require 'company-lsp)
 
 ;; lsp mode
 (require-package 'lsp-mode)
 (require 'lsp-mode)
 ;; config
-(setq lsp-prefer-flymake nil)
+(setq gc-cons-threshold 100000000)
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
+(setq lsp-idle-delay 0.500)
 (add-hook 'js-mode-hook #'lsp)
 (add-hook 'typescript-mode-hook #'lsp)
 (add-hook 'web-mode-hook #'lsp)
