@@ -41,7 +41,9 @@
 ;;shortcut key
 (require 'init-shortcut-key)
 ;;lsp
-(require 'init-lsp)
+;; (require 'init-lsp)
+;; tabnine
+(require 'init-tabnine)
 ;;multiple-cursors
 (require 'init-multiple-cursors)
 

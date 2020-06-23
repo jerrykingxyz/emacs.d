@@ -11,4 +11,6 @@
                  `(lambda () (interactive) (company-complete-number ,x))))
         (number-sequence 0 9)))
 
+(setq company-tooltip-align-annotations t)
+
 (provide 'init-company)
