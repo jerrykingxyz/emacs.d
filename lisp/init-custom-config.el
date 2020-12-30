@@ -9,6 +9,9 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+;; disable lockfiles
+(setq create-lockfiles nil)
+
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 
