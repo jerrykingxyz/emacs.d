@@ -43,7 +43,7 @@
 ;;lsp
 (require 'init-lsp)
 ;; tabnine
-(require 'init-tabnine)
+;; (require 'init-tabnine)
 ;;multiple-cursors
 (require 'init-multiple-cursors)
 

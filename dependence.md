@@ -54,3 +54,6 @@ npm install -g typescript-language-server
 
 *** lsp for go
 go get -u github.com/sourcegraph/go-langserver
+
+*** lsp for json
+npm install -g vscode-json-languageserver
