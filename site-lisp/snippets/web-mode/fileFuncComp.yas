@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: init file as a react function component
+# key: fileFuncComp
+# condition: (string-equal (file-name-extension (buffer-file-name)) "tsx")
+# --
+import React from 'react'
+${2:$(unless (string-equal yas-text "any") (format "\ninterface %s {\n\n}\n" yas-text))}
+export default function ${1:`(capitalize (file-name-base (buffer-file-name)))`} (${2:any}){
+  return <div>
+    $0
+  </div>
+}

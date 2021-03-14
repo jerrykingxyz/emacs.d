@@ -1,9 +1,9 @@
 # -*- mode: snippet -*-
-# name: init file as a react component
-# key: fileReactComp
+# name: init file as a react class component
+# key: fileClassComp
 # condition: (string-equal (file-name-extension (buffer-file-name)) "tsx")
 # --
-import * as React from 'react'
+import React from 'react'
 ${2:$(unless (string-equal yas-text "any") (format "\ninterface %s {\n\n}\n" yas-text))}${3:$(unless (string-equal yas-text "any") (format "\ninterface %s {\n\n}\n" yas-text))}
 export default class ${1:`(capitalize (file-name-base (buffer-file-name)))`} extends React.Component<${2:any}, ${3:any}> {
   render() {
