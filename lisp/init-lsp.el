@@ -22,12 +22,19 @@
 (add-hook 'go-mode-hook #'lsp)
 
 ;; dap mode
-;;(require-package 'dap-mode)
-;;(require 'dap-mode)
-;;(dap-mode 1)
-;;(dap-ui-mode 1)
+(require-package 'dap-mode)
+(require 'dap-mode)
+(dap-mode 1)
+(dap-ui-mode 1)
 ;; nodejs
-;;(require 'dap-node)
+(require 'dap-node)
+;;(dap-register-debug-template "test"
+;;                             (list :type "node"
+;;                                   :sourceMaps t
+;;                                   :request "attach"
+;;                                   :host "localhost"
+;;                                   :port 9229
+;;                                   :protocol "inspector"))
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here

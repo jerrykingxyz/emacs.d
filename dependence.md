@@ -52,6 +52,10 @@ brew install ripgrep
 *** lsp for front end
 npm install -g typescript-language-server
 
+*** lsp dap
+run dap-node-setup
+config init-lsp.el
+
 *** lsp for go
 go get -u github.com/sourcegraph/go-langserver
 
