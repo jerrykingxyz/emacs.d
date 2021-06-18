@@ -42,6 +42,8 @@
 (require 'init-shortcut-key)
 ;;lsp
 (require 'init-lsp)
+;; rust
+(require 'init-rust)
 ;; tabnine
 ;; (require 'init-tabnine)
 ;;multiple-cursors

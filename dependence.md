@@ -61,3 +61,8 @@ go get -u github.com/sourcegraph/go-langserver
 
 *** lsp for json
 npm install -g vscode-json-languageserver
+
+*** lsp for rust
+// install rustup
+// install rls & rustc & rustfmt
+

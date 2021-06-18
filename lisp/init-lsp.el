@@ -20,6 +20,7 @@
 (add-hook 'typescript-mode-hook #'lsp)
 (add-hook 'web-mode-hook #'lsp)
 (add-hook 'go-mode-hook #'lsp)
+(add-hook 'rust-mode-hook #'lsp)
 
 ;; dap mode
 (require-package 'dap-mode)
