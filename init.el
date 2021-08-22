@@ -40,6 +40,8 @@
 (require 'init-javascript)
 ;;shortcut key
 (require 'init-shortcut-key)
+;;pomidor
+(require 'init-pomidor)
 ;;lsp
 (require 'init-lsp)
 ;; rust
