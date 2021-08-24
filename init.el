@@ -24,6 +24,8 @@
 (require 'init-glsl)
 ;;yasnippet
 (require 'init-yasnippet)
+;; lua mode
+(require 'init-lua)
 ;;css mode
 (require 'init-css)
 ;;neotree
