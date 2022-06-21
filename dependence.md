@@ -57,7 +57,7 @@ run dap-node-setup
 config init-lsp.el
 
 *** lsp for go
-go get -u github.com/sourcegraph/go-langserver
+go install golang.org/x/tools/gopls@latest
 
 *** lsp for json
 npm install -g vscode-json-languageserver

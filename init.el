@@ -44,10 +44,12 @@
 (require 'init-shortcut-key)
 ;;pomidor
 (require 'init-pomidor)
-;;lsp
-(require 'init-lsp)
 ;; rust
 (require 'init-rust)
+;; go
+(require 'init-go)
+;;lsp
+(require 'init-lsp)
 ;; tabnine
 ;; (require 'init-tabnine)
 ;;multiple-cursors
