@@ -12,44 +12,46 @@
 
 ;; org mode 自动断行
 ;;(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
-;;git
+;; git
 (require 'init-git)
-;;rg
+;; rg
 (require 'init-rg)
-;;comany mode
+;; comany mode
 (require 'init-company)
-;;flycheck mode
+;; flycheck mode
 (require 'init-flycheck)
-;;glsl mode
+;; glsl mode
 (require 'init-glsl)
-;;yasnippet
+;; yasnippet
 (require 'init-yasnippet)
 ;; lua mode
 (require 'init-lua)
-;;css mode
+;; css mode
 (require 'init-css)
-;;neotree
+;; neotree
 (require 'init-neotree)
-;;custom config
+;; custom config
 (require 'init-custom-config)
-;;buffer
+;; buffer
 (require 'init-buffer)
-;;theme
+;; theme
 (require 'init-theme)
-;;json
+;; json
 (require 'init-json)
-;;javascript
+;; javascript
 (require 'init-javascript)
-;;shortcut key
+;; shortcut key
 (require 'init-shortcut-key)
-;;pomidor
+;; pomidor
 (require 'init-pomidor)
 ;; rust
 (require 'init-rust)
 ;; go
 (require 'init-go)
-;;lsp
+;; lsp
 (require 'init-lsp)
+;; markdown
+(require 'init-markdown)
 ;; tabnine
 ;; (require 'init-tabnine)
 ;;multiple-cursors

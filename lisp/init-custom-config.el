@@ -28,6 +28,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (setq mouse-yank-at-point t)
+(setq byte-compile-warnings nil)
 
 ;; use global subword-mode
 (global-subword-mode 1)
