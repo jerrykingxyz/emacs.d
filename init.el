@@ -35,7 +35,11 @@
 ;; buffer
 (require 'init-buffer)
 ;; theme
-(require 'init-theme)
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+              (lambda (frame)
+                (with-selected-frame frame (require 'init-theme))))
+  (require 'init-theme))
 ;; json
 (require 'init-json)
 ;; javascript
