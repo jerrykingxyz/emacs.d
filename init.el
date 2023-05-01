@@ -42,6 +42,8 @@
   (require 'init-theme))
 ;; json
 (require 'init-json)
+;; yaml
+(require 'init-yaml)
 ;; javascript
 (require 'init-javascript)
 ;; shortcut key
