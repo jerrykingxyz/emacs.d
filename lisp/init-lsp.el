@@ -29,13 +29,30 @@
 (dap-ui-mode 1)
 ;; nodejs
 (require 'dap-node)
-;;(dap-register-debug-template "test"
-;;                             (list :type "node"
-;;                                   :sourceMaps t
-;;                                   :request "attach"
-;;                                   :host "localhost"
-;;                                   :port 9229
-;;                                   :protocol "inspector"))
+
+;; run `M-x dap-node-setup` to init env
+;; run debug with 'node --inspect-brk --enable-source-maps ./index.js'
+(dap-register-debug-template "node-js-debug"
+                             (list :type "node"
+                                   :sourceMaps t
+                                   :request "attach"
+                                   :host "localhost"
+                                   :port 9229
+                                   :protocol "inspector"))
+
+
+;; apt install gdbserver
+;; gdbserver localhost:2000 <command>
+(require 'dap-gdb-lldb)
+(dap-register-debug-template "rust-debug"
+                             (list :type "gdbserver"
+                                   :request "attach"
+				                           :gdbpath "rust-gdb"
+                                   :target ":2000"
+                                   :cwd (expand-file-name default-directory)))
+;; see gdb info in `dap-go-to-output-buffer`
+;; run `set print pretty` in gdb
+(setq dap-output-buffer-filter '("stdout" "stderr" "console"))
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here
