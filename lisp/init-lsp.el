@@ -4,6 +4,7 @@
 
 ;;; Code:
 
+(setenv "LSP_USE_PLISTS" "true")
 ;; company lsp
 ;;(require-package 'company-lsp)
 ;;(require 'company-lsp)
@@ -21,6 +22,10 @@
 (add-hook 'web-mode-hook #'lsp)
 (add-hook 'go-mode-hook #'lsp)
 (add-hook 'rust-mode-hook #'lsp)
+
+(add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\node_modules\\'")
+(add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\dist\\'")
+(add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\target\\'")
 
 ;; dap mode
 (require-package 'dap-mode)

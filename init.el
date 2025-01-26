@@ -46,8 +46,6 @@
 (require 'init-yaml)
 ;; javascript
 (require 'init-javascript)
-;; shortcut key
-(require 'init-shortcut-key)
 ;; pomidor
 (require 'init-pomidor)
 ;; rust
@@ -58,8 +56,6 @@
 (require 'init-lsp)
 ;; markdown
 (require 'init-markdown)
-;; tabnine
-;; (require 'init-tabnine)
 ;;multiple-cursors
 (require 'init-multiple-cursors)
 
